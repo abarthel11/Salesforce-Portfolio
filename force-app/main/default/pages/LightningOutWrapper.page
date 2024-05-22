@@ -1,0 +1,23 @@
+<!--
+  @description  : 
+  @author       : Austin Barthel
+  @group        : Cloud Coach 
+  Modifications Log
+  Ver   Date         Author           Modification
+  1.0   05-19-2024   Austin Barthel   Initial Version
+-->
+<apex:page standardStylesheets="true" sidebar="false" applyBodyTag="false" showHeader="false">
+<header>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" title="Austin Barthel | Portfolio" />
+</header>
+<!-- Load the LWC component using lightning out -->
+<apex:includeLightning />
+<div id="wrapper"></div>
+<script>
+
+    // Render the component after the Lightning runtime has loaded
+    $Lightning.use("c:lwcContainer", function() {
+        $Lightning.createComponent("c:portfolio", {},"wrapper");
+    });
+</script>
+</apex:page>
